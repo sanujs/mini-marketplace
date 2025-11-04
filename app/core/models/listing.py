@@ -22,6 +22,5 @@ class Listing(Base):
     market_id: Mapped[int] = mapped_column(Integer, ForeignKey("markets.id"))
     market: Mapped["Market"] = relationship(back_populates="listings")
 
-    # One to one relationships
-    owner_id: Mapped[int] = mapped_column(Integer, ForeignKey("users.id"))
-    owner: Mapped["User"] = relationship(back_populates="listing")
+    seller_id: Mapped[int] = mapped_column(Integer, ForeignKey("users.id"))
+    seller: Mapped["User"] = relationship(back_populates="listings")

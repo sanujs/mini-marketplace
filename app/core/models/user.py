@@ -19,3 +19,6 @@ class User(Base):
     markets: Mapped[list["Market"]] = relationship(
         secondary="user_market_through", back_populates="users"
     )
+
+    # One to many relationships
+    listings: Mapped[list["Listing"]] = relationship(back_populates="seller")
