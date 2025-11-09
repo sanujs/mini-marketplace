@@ -12,4 +12,5 @@ dependencies = [
     "pytest-env>=1.2.0",
     "python-dotenv>=1.2.1",
     "sqlalchemy>=2.0.44",
+    "strawberry-graphql[fastapi]>=0.284.1",
 ]
